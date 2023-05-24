@@ -8,15 +8,15 @@
 #' \item{main.tol}{stopping criterion for the main problem (default: \code{1e-5}).}
 #' \item{sub.iter}{maximum number of iterations for subproblem (default: 10).}
 #' \item{sub.tol}{stopping criterion for subproblems (default: \code{1e-5}.)}
-#' \item{learning.fixed}{logical on how to solve subproblems. \code{TRUE} means that each iteration will proceed with a fixed step size and \code{FALSE} runs a line search, which may be expensive. (default: \code{FALSE}).}
+#' \item{learning.fixed}{logical on how to solve subproblems. \code{TRUE} means that each iteration will proceed with a fixed step size and \code{FALSE} runs a line search, which may be expensive (default: \code{FALSE}).}
 #' \item{learning.rate}{learning rate is a stepsize for subproblem optimization. It is only needed when \code{learning.fixed=TRUE} (default: 0.1).}
-#' \item{weight.scheme}{exponent to control weighing scheme. It should be one of \eqn{0},\eqn{1}, or \eqn{2}. For more detailed explanation, see the section below. (default: 0).}
-#' \item{scale.spherical}{boolean to scale the \code{diss} for the spherical geometry case for better visualization. (default: \code{TRUE}).}
-#' \item{scale.factor}{scaling factor for \code{scale.spherical=TRUE} case. It should be a number in \eqn{(0,1)}. (default: 0.99).}
-# }
+#' \item{weight.scheme}{exponent to control weighing scheme. It should be one of \eqn{0},\eqn{1}, or \eqn{2}. For more detailed explanation, see the section below (default: 0).}
+#' \item{scale.spherical}{boolean to scale the \code{diss} for the spherical geometry case for better visualization (default: \code{TRUE}).}
+#' \item{scale.factor}{scaling factor for \code{scale.spherical=TRUE} case. It should be a number in \eqn{(0,1)} (default: 0.99).}
+#' }
 #' 
 #' @return a named list containing \describe{
-#' \item{embedding}{low-dimensional embedding of \eqn{n} objects. If \code{geometry="euclidean"}, it returns an \eqn{(n\times p)} matrix. Otherwise, it returns an \eqn{(n\times p+1)} matrix. In both cases, each row corresponds to an embedded vector onto the chosen manifold.}
+#' \item{embedding}{low-dimensional embedding of \eqn{n} objects. If \code{geometry="euclidean"}, it returns an \eqn{(n\times p)} matrix. Otherwise, it returns an \eqn{(n\times (p+1))} matrix. In both cases, each row corresponds to an embedded vector onto the chosen manifold.}
 #' }
 #' 
 #' @concept dissimilarity
@@ -158,3 +158,11 @@ GERM <- function(diss, p=2, geometry=c("euclidean","spherical","hyperbolic"), ..
 #   check_2[i] = sqrt(sum(G2$embedding[i,]^2))
 #   check_3[i] = lorentz(G3$embedding[i,])
 # }
+
+
+# @param ... extra parameters including \describe{
+
+
+
+
+# #  
