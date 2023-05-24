@@ -1,0 +1,13 @@
+Package: RiemannLVM
+Type: Package
+Title: Latent Variable Models with Riemannian Geometry
+Version: 0.1.0
+Author: Kisung You
+Maintainer: Kisung You <kisungyou@outlook.com>
+Description: More about what it does (maybe more than one line).
+License: MIT + file LICENSE
+Suggests: tinytest
+Encoding: UTF-8
+RoxygenNote: 7.2.3
+Imports: Rcpp (>= 1.0.10), Rdpack
+LinkingTo: Rcpp, RcppArmadillo
